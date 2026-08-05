@@ -1,4 +1,3 @@
-````markdown
 <div align="center">
 
 # 🛒 One Vendor Ecommerce Backend
@@ -281,4 +280,3 @@ LinkedIn: https://www.linkedin.com/in/syed-fahad-mahmud-33b65b248/
 Made with ❤️ by **Syed Fahad Mahmud**
 
 </div>
-````
