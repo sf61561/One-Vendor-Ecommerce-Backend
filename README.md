@@ -1,76 +1,86 @@
 ````markdown
-# 🛒 One Vendor Ecommerce - Backend
+<div align="center">
 
-<p align="center">
-  <strong>A production-ready REST API for the One Vendor Ecommerce platform.</strong>
-</p>
+# 🛒 One Vendor Ecommerce Backend
 
-<p align="center">
+### A Modern, Secure, and Scalable RESTful API for One Vendor Ecommerce
 
-![Node.js](https://img.shields.io/badge/Node.js-20+-339933?style=for-the-badge&logo=node.js)
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql)
-![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary)
-![JWT](https://img.shields.io/badge/JWT-Authentication-orange?style=for-the-badge)
+Built with **Node.js**, **Express.js**, **PostgreSQL**, and modern backend development best practices.
 
-</p>
+[![Node.js](https://img.shields.io/badge/Node.js-20+-339933?style=for-the-badge&logo=node.js)](https://nodejs.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-5-000000?style=for-the-badge&logo=express)](https://expressjs.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-4169E1?style=for-the-badge&logo=postgresql)](https://www.postgresql.org/)
+[![Cloudinary](https://img.shields.io/badge/Cloudinary-Image_Storage-3448C5?style=for-the-badge&logo=cloudinary)](https://cloudinary.com/)
+[![JWT](https://img.shields.io/badge/JWT-Authentication-orange?style=for-the-badge)](https://jwt.io/)
 
----
+[📚 API Documentation](YOUR_API_DOCS_LINK)
+•
+[🌐 Frontend Repository](https://github.com/sf61561/One-Vendor-Ecommerce-Frontend)
 
-# 📖 Overview
-
-The One Vendor Ecommerce Backend provides secure REST APIs for authentication and future eCommerce operations. It follows a layered architecture that separates routing, controllers, services, repositories, middleware, and configuration to ensure scalability and maintainability.
+</div>
 
 ---
 
-# ✨ Current Features
+# 📖 About
+
+One Vendor Ecommerce Backend is a production-ready RESTful API built using **Node.js**, **Express.js**, and **PostgreSQL**. It follows a layered architecture to ensure clean code, maintainability, scalability, and security.
+
+The backend currently includes authentication, image upload with Cloudinary, request validation, and database integration while serving as the foundation for a complete eCommerce platform.
+
+---
+
+# ✨ Features
 
 - 🔐 JWT Authentication
 - 👤 User Registration
 - 🔑 User Login
 - ☁️ Cloudinary Image Upload
 - 📷 Multer Memory Storage
-- 🔒 Password Hashing
+- 🔒 Password Hashing (bcrypt)
 - ✅ Request Validation
+- 🗄 PostgreSQL Database
 - 🏗 Layered Architecture
-- 🌐 RESTful API Design
+- 🌐 RESTful APIs
 - ⚡ Express.js Server
+- 🔐 Environment Variable Configuration
 
 ---
 
 # 🛠 Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| Node.js | Runtime |
-| Express.js | Backend Framework |
-| PostgreSQL | Database |
-| Cloudinary | Image Storage |
-| Multer | File Upload |
-| JWT | Authentication |
-| bcrypt | Password Hashing |
-| dotenv | Environment Variables |
+| Category | Technology |
+|----------|------------|
+| Runtime | Node.js |
+| Framework | Express.js |
+| Database | PostgreSQL |
+| Authentication | JWT |
+| Password Hashing | bcrypt |
+| File Upload | Multer |
+| Cloud Storage | Cloudinary |
+| Validation | express-validator |
+| Environment | dotenv |
 
 ---
 
-# 📂 Project Structure
+# 📂 Folder Structure
 
 ```text
-backend/
+One-Vendor-Ecommerce-Backend/
 │
 ├── Config/
-│   ├── cloudinary.js
-│   └── db.js
+│   ├── cloudinary.config.js
+│   └── db.config.js
 │
 ├── Controllers/
 │   └── auth.controller.js
 │
 ├── Middleware/
 │   ├── auth.middleware.js
-│   └── upload.middleware.js
+│   ├── upload.middleware.js
+│   └── error.middleware.js
 │
 ├── Repositories/
-│   └── user.repository.js
+│   └── auth.repository.js
 │
 ├── Routes/
 │   └── auth.routes.js
@@ -81,10 +91,11 @@ backend/
 ├── Validators/
 │   └── auth.validator.js
 │
+├── .env
+├── .gitignore
 ├── index.js
 ├── package.json
 ├── package-lock.json
-├── .env
 └── README.md
 ```
 
@@ -92,13 +103,13 @@ backend/
 
 # 🚀 Getting Started
 
-## Clone the repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/sf61561/One-Vendor-Ecommerce-Backend.git
 ```
 
-Move into the project
+Move inside project
 
 ```bash
 cd One-Vendor-Ecommerce-Backend
@@ -110,13 +121,13 @@ Install dependencies
 npm install
 ```
 
-Run the development server
+Run development server
 
 ```bash
 npm run dev
 ```
 
-Run the production server
+Run production server
 
 ```bash
 npm start
@@ -126,7 +137,7 @@ npm start
 
 # ⚙ Environment Variables
 
-Create a `.env` file in the project root.
+Create a `.env` file.
 
 ```env
 PORT=5000
@@ -137,7 +148,7 @@ DB_NAME=your_database
 DB_USER=your_username
 DB_PASSWORD=your_password
 
-JWT_SECRET=your_secret_key
+JWT_SECRET=your_jwt_secret
 JWT_EXPIRES_IN=1d
 
 CLOUDINARY_CLOUD_NAME=your_cloud_name
@@ -145,18 +156,18 @@ CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 ```
 
-<!-- ---
+---
 
-# 📡 API Endpoints
+<!-- # 📡 API Endpoints
 
 ## Authentication
 
 | Method | Endpoint | Description |
 |---------|----------|-------------|
 | POST | `/api/auth/register` | Register a new user |
-| POST | `/api/auth/login` | Login user |
+| POST | `/api/auth/login` | Login user | -->
 
---- -->
+---
 
 # 🏗 Architecture
 
@@ -181,66 +192,71 @@ PostgreSQL
 
 ---
 
-# 🔒 Security
+# 🎯 Roadmap
 
-- Password hashing with bcrypt
-- JWT-based authentication
-- Environment variable protection
-- Request validation
-- File upload restrictions
-- Layered architecture
+- Refresh Token Authentication
+- Role-Based Authorization (RBAC)
+- Product Management
+- Category Management
+- Brand Management
+- Shopping Cart
+- Wishlist
+- Orders
+- Payment Integration
+- Reviews & Ratings
+- Inventory Management
+- Coupons
+- Email Verification
+- Password Reset
+- Rate Limiting
+- Redis Caching
+- Logging
+- API Documentation (Swagger)
 
 ---
 
-# 📌 Planned Features
+# 📈 Performance Goals
 
-- Refresh Tokens
-- Role-Based Authorization
-- Product Management
-- Category Management
-- Shopping Cart
-- Orders
-- Payments
-- Coupons
-- Reviews
-- Wishlist
-- Inventory Management
-- Email Verification
-- Password Reset
-- Logging
-- Rate Limiting
-- Redis Caching
-- API Documentation (Swagger)
+- Clean Architecture
+- Secure Authentication
+- Scalable Codebase
+- Database Optimization
+- RESTful API Design
+- Centralized Error Handling
+- High Performance
+- Production Ready
 
 ---
 
 # 🤝 Contributing
 
-1. Fork the repository.
+Contributions are welcome.
 
-2. Create a feature branch.
+1. Fork the repository
+
+2. Create a branch
 
 ```bash
 git checkout -b feature/new-feature
 ```
 
-3. Commit your changes.
+3. Commit changes
 
 ```bash
-git commit -m "Add new feature"
+git commit -m "Added new feature"
 ```
 
-4. Push to your branch.
+4. Push
 
 ```bash
 git push origin feature/new-feature
 ```
 
-5. Open a Pull Request.
+5. Open Pull Request
 
 ---
 
-# 📄 License
+# 📜 License
 
 This project is licensed under the MIT License.
 
@@ -248,15 +264,21 @@ This project is licensed under the MIT License.
 
 # 👨‍💻 Author
 
-**Syed Fahad Mahmud**
+### Syed Fahad Mahmud
 
-- GitHub: https://github.com/sf61561
+CSE Graduate | Full Stack Web Developer
+
+GitHub: https://github.com/sf61561
+
+LinkedIn: https://www.linkedin.com/in/syed-fahad-mahmud-33b65b248/
 
 ---
 
-<p align="center">
+<div align="center">
 
-⭐ If you found this project useful, consider giving it a star!
+### ⭐ If you like this project, give it a star!
 
-</p>
+Made with ❤️ by **Syed Fahad Mahmud**
+
+</div>
 ````
