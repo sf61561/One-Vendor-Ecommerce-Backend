@@ -19,7 +19,7 @@
 
 # 📖 Overview
 
-The One Vendor Ecommerce Backend provides secure REST APIs for authentication and future eCommerce operations. It follows a layered architecture that separates routing, controllers, services, repositories, middleware and configuration to ensure scalability and maintainability.
+The One Vendor Ecommerce Backend provides secure REST APIs for authentication and future eCommerce operations. It follows a layered architecture that separates routing, controllers, services, repositories, middleware, and configuration to ensure scalability and maintainability.
 
 ---
 
