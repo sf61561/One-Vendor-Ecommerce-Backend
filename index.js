@@ -2,17 +2,24 @@ import express from "express";
 import pool from "./Config/db.js";
 import AuthRoutes from "./Routes/auth.routes.js";
 import cors from "cors";
+import helmet from "helmet";
+import cookieParser from "cookie-parser";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+app.use(
+  helmet({
+    crossOriginResourcePolicy: false,
+  })
+);
+app.use(cookieParser()); 
 app.get("/", (req, res) => {
   res.send("Server is running.....");
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_URL,
     credentials: true
 }))
 
