@@ -10,7 +10,7 @@ class AuthService {
             const userData = req.body;
             const image = req.file;
             const isExistingUser = await UserRepository.findUserByEmail(userData.email);
-            if(isExistingUser.success && isExistingUser.user) {
+            if(isExistingUser.user) {
                 return { success: false, message: "User already exists", user: null };
             }
             else if(!isExistingUser.success) {
